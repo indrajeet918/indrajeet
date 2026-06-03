@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indrajeet Kumar | Magento 2 Developer & PHP Specialist</title>
+    <meta name="description" content="Portfolio of Indrajeet Kumar - Magento 2 Developer, PHP & E-Commerce Specialist based in Siliguri, West Bengal.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>IK<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting animate-on-scroll">
+                    <span class="greeting-line"></span>
+                    <span class="greeting-text">Hello, I'm</span>
+                </div>
+                <h1 class="hero-name animate-on-scroll">
+                    <span class="name-line">Indrajeet</span>
+                    <span class="name-line name-highlight">Kumar</span>
+                </h1>
+                <div class="hero-role animate-on-scroll">
+                    <span class="role-icon"><i class="fas fa-code"></i></span>
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="cursor-blink">|</span>
+                </div>
+                <p class="hero-description animate-on-scroll">
+                    Building robust e-commerce solutions with Magento 2, PHP, and modern web technologies.
+                </p>
+                <div class="hero-buttons animate-on-scroll">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Contact Me</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="hero-stats animate-on-scroll">
+                    <div class="stat">
+                        <span class="stat-number" data-count="4">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="7">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Technologies</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-number" data-count="1">0</span><span class="stat-plus">+</span>
+                        <span class="stat-label">Year Exp</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual animate-on-scroll">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="code-title">developer.php</span>
+                    </div>
+                    <div class="code-body">
+                        <pre><code><span class="code-keyword">&lt;?php</span>
+
+<span class="code-keyword">class</span> <span class="code-class">Developer</span>
+{
+    <span class="code-keyword">public</span> <span class="code-variable">$name</span> = <span class="code-string">"Indrajeet Kumar"</span>;
+    <span class="code-keyword">public</span> <span class="code-variable">$role</span> = <span class="code-string">"Magento 2 Dev"</span>;
+    <span class="code-keyword">public</span> <span class="code-variable">$skills</span> = [
+        <span class="code-string">"PHP"</span>, <span class="code-string">"Magento 2"</span>,
+        <span class="code-string">"MySQL"</span>, <span class="code-string">"React"</span>,
+        <span class="code-string">"SEO"</span>
+    ];
+
+    <span class="code-keyword">public function</span> <span class="code-function">isHireable</span>(): <span class="code-type">bool</span>
+    {
+        <span class="code-keyword">return</span> <span class="code-boolean">true</span>;
+    }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-user"></i> Get To Know Me</span>
+                <h2 class="section-title">About <span class="highlight">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-terminal animate-on-scroll">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="terminal-title">about_me.sh</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p class="terminal-line">
+                            <span class="terminal-prompt">indrajeet@dev:~$</span> cat about.txt
+                        </p>
+                        <p class="terminal-output">
+                            I'm a final-year B.Sc. Computer Science student at Salesian College, Siliguri, currently interning as a Web Developer at PlaceWell Retail. I specialize in Magento 2 backend development, custom module development, technical SEO, and e-commerce optimization.
+                        </p>
+                        <p class="terminal-output">
+                            I enjoy solving real production-level problems and building things that work at scale.
+                        </p>
+                        <p class="terminal-line">
+                            <span class="terminal-prompt">indrajeet@dev:~$</span> <span class="terminal-cursor">_</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="about-info animate-on-scroll">
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="info-details">
+                                <span class="info-label">Location</span>
+                                <span class="info-value">Siliguri, West Bengal</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-graduation-cap"></i></div>
+                            <div class="info-details">
+                                <span class="info-label">Education</span>
+                                <span class="info-value">B.Sc. Computer Science</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-briefcase"></i></div>
+                            <div class="info-details">
+                                <span class="info-label">Currently</span>
+                                <span class="info-value">Web Dev Intern @ PlaceWell</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon"><i class="fas fa-heart"></i></div>
+                            <div class="info-details">
+                                <span class="info-label">Passionate About</span>
+                                <span class="info-value">E-Commerce & Backend Dev</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="Indrajeet_Kumar_Resume.pdf" download class="btn btn-primary resume-btn">
+                        <i class="fas fa-download"></i>
+                        <span>Download Resume</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-cogs"></i> What I Work With</span>
+                <h2 class="section-title">Technical <span class="highlight">Skills</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-server"></i></div>
+                        <h3>Backend & CMS</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-magento"></i> Magento 2</span>
+                        <span class="skill-tag"><i class="fab fa-php"></i> PHP</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-tag"><i class="fas fa-cubes"></i> OOP</span>
+                    </div>
+                </div>
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3>Frontend & Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fab fa-js-square"></i> JavaScript</span>
+                        <span class="skill-tag"><i class="fab fa-react"></i> React.js</span>
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML5</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Responsive Design</span>
+                    </div>
+                </div>
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-search"></i></div>
+                        <h3>SEO & Marketing</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-google"></i> Google Search Console</span>
+                        <span class="skill-tag"><i class="fas fa-shopping-cart"></i> Google Merchant Center</span>
+                        <span class="skill-tag"><i class="fas fa-chart-line"></i> Technical SEO</span>
+                        <span class="skill-tag"><i class="fas fa-code"></i> JSON-LD Schema</span>
+                    </div>
+                </div>
+                <div class="skill-category animate-on-scroll">
+                    <div class="category-header">
+                        <div class="category-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Tools & DevOps</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="skill-tag"><i class="fas fa-edit"></i> VS Code</span>
+                        <span class="skill-tag"><i class="fab fa-chrome"></i> Chrome DevTools</span>
+                        <span class="skill-tag"><i class="fas fa-terminal"></i> SSH</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> Server Mgmt</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-briefcase"></i> Where I've Worked</span>
+                <h2 class="section-title">Work <span class="highlight">Experience</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-marker">
+                        <div class="marker-dot">
+                            <div class="marker-pulse"></div>
+                        </div>
+                        <div class="timeline-line"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="exp-header">
+                                <div class="exp-company-info">
+                                    <div class="exp-icon"><i class="fas fa-building"></i></div>
+                                    <div>
+                                        <h3 class="exp-company">PlaceWell Retail</h3>
+                                        <span class="exp-role">Web Developer Intern</span>
+                                    </div>
+                                </div>
+                                <div class="exp-meta">
+                                    <span class="exp-date"><i class="fas fa-calendar-alt"></i> 2025 – Present</span>
+                                    <span class="exp-location"><i class="fas fa-map-marker-alt"></i> Siliguri, India</span>
+                                    <span class="exp-type"><i class="fas fa-building"></i> On-site</span>
+                                </div>
+                            </div>
+                            <ul class="exp-highlights">
+                                <li>
+                                    <span class="highlight-icon"><i class="fas fa-bolt"></i></span>
+                                    <span>Built a custom <strong>WhatsApp order notification</strong> Magento module integrating WATI API with event observers</span>
+                                </li>
+                                <li>
+                                    <span class="highlight-icon"><i class="fas fa-bolt"></i></span>
+                                    <span>Resolved critical <strong>server disk space crisis</strong> (99% full) via SSH-based cache and log cleanup</span>
+                                </li>
+                                <li>
+                                    <span class="highlight-icon"><i class="fas fa-bolt"></i></span>
+                                    <span>Fixed <strong>Google Merchant Center</strong> mass product disapproval caused by Cloudflare blocking Googlebot</span>
+                                </li>
+                                <li>
+                                    <span class="highlight-icon"><i class="fas fa-bolt"></i></span>
+                                    <span>Debugged <strong>Magento layout XML</strong> issues and built CMS-based homepage with hero banner, brand grid, and FAQ with JSON-LD</span>
+                                </li>
+                                <li>
+                                    <span class="highlight-icon"><i class="fas fa-bolt"></i></span>
+                                    <span>Managed product feeds, <strong>GSC crawl errors</strong>, and on-page SEO optimization</span>
+                                </li>
+                            </ul>
+                            <div class="exp-tech-tags">
+                                <span>Magento 2</span>
+                                <span>PHP</span>
+                                <span>SEO</span>
+                                <span>Google Search Console</span>
+                                <span>WATI API</span>
+                                <span>SSH</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-rocket"></i> What I've Built</span>
+                <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-icon-bg">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-number">01</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Magento 2</span>
+                            <span>PHP</span>
+                            <span>WATI API</span>
+                        </div>
+                        <h3 class="project-title">WhatsApp Order Notification Module</h3>
+                        <ul class="project-features">
+                            <li>Custom Magento 2 module using event observers</li>
+                            <li>Sends automatic WhatsApp messages to customers on order placement</li>
+                            <li>Integrated with WATI API for message delivery</li>
+                        </ul>
+                        <div class="project-links">
+                            <span class="project-status"><i class="fas fa-circle"></i> Production</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-icon-bg">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-number">02</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Magento</span>
+                            <span>GSC</span>
+                            <span>SEO</span>
+                        </div>
+                        <h3 class="project-title">E-Commerce SEO & Performance Audit</h3>
+                        <ul class="project-features">
+                            <li>Full technical SEO audit on a live multi-store e-commerce site</li>
+                            <li>Fixed indexing errors, broken links, missing meta tags</li>
+                            <li>Optimized GMC product feeds, improved Shopping ad eligibility</li>
+                        </ul>
+                        <div class="project-links">
+                            <span class="project-status"><i class="fas fa-circle"></i> Live</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-icon-bg">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-number">03</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+                        </div>
+                        <h3 class="project-title">Online Event Ticket Booking System</h3>
+                        <ul class="project-features">
+                            <li>Full-stack web app for event registration and ticket booking</li>
+                            <li>Form validation, responsive design, secure MySQL database</li>
+                            <li>User-friendly interface with real-time availability</li>
+                        </ul>
+                        <div class="project-links">
+                            <span class="project-status"><i class="fas fa-circle"></i> Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card animate-on-scroll">
+                    <div class="project-image">
+                        <div class="project-icon-bg">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="project-overlay">
+                            <span class="project-number">04</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>SQL</span>
+                        </div>
+                        <h3 class="project-title">Student Event Portal</h3>
+                        <ul class="project-features">
+                            <li>College event management portal for announcements and registrations</li>
+                            <li>Modular code with form validation</li>
+                            <li>Clean responsive design for all devices</li>
+                        </ul>
+                        <div class="project-links">
+                            <span class="project-status"><i class="fas fa-circle"></i> Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section education" id="education">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-graduation-cap"></i> My Education</span>
+                <h2 class="section-title">Education & <span class="highlight">Academics</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-grid">
+                <div class="edu-card animate-on-scroll">
+                    <div class="edu-year">
+                        <span>2023</span>
+                        <span class="edu-dash">—</span>
+                        <span>Present</span>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-icon"><i class="fas fa-university"></i></div>
+                        <h3>B.Sc. Computer Science</h3>
+                        <p class="edu-institution">Salesian College, Siliguri</p>
+                        <div class="edu-scores">
+                            <div class="score-item">
+                                <span class="score-label">3rd Sem</span>
+                                <span class="score-value">SGPA: 8.31</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="score-label">2nd Sem</span>
+                                <span class="score-value">SGPA: 7.77</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="score-label">1st Sem</span>
+                                <span class="score-value">SGPA: 7.70</span>
+                            </div>
+                        </div>
+                        <div class="edu-progress">
+                            <div class="progress-bar" data-width="83"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edu-card animate-on-scroll">
+                    <div class="edu-year">
+                        <span>2023</span>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-icon"><i class="fas fa-school"></i></div>
+                        <h3>Class 12 — Higher Secondary</h3>
+                        <p class="edu-institution">Kendriya Vidyalaya, Bengdubi</p>
+                        <div class="edu-scores">
+                            <div class="score-item">
+                                <span class="score-label">Percentage</span>
+                                <span class="score-value">72%</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="score-label">Division</span>
+                                <span class="score-value">First</span>
+                            </div>
+                        </div>
+                        <div class="edu-progress">
+                            <div class="progress-bar" data-width="72"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edu-card animate-on-scroll">
+                    <div class="edu-year">
+                        <span>2021</span>
+                    </div>
+                    <div class="edu-content">
+                        <div class="edu-icon"><i class="fas fa-school"></i></div>
+                        <h3>Class 10 — Secondary</h3>
+                        <p class="edu-institution">Kendriya Vidyalaya, Bengdubi</p>
+                        <div class="edu-scores">
+                            <div class="score-item">
+                                <span class="score-label">Percentage</span>
+                                <span class="score-value">85%</span>
+                            </div>
+                            <div class="score-item">
+                                <span class="score-label">Division</span>
+                                <span class="score-value">Distinction</span>
+                            </div>
+                        </div>
+                        <div class="edu-progress">
+                            <div class="progress-bar" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section achievements" id="achievements">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-trophy"></i> Recognition</span>
+                <h2 class="section-title">Achievements & <span class="highlight">Awards</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-glow"></div>
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>3rd Place — CodeChef TechnoKrat 2025</h3>
+                        <p>Secured 3rd place in a competitive coding contest, demonstrating strong algorithmic problem-solving skills.</p>
+                    </div>
+                    <div class="achievement-badge">
+                        <span>🏆</span>
+                    </div>
+                </div>
+                <div class="achievement-card animate-on-scroll">
+                    <div class="achievement-glow"></div>
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3>Salesian College Techne Association</h3>
+                        <p>Active member — Participated in tech events, workshops, and knowledge-sharing sessions at the college's technical society.</p>
+                    </div>
+                    <div class="achievement-badge">
+                        <span>🎓</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <span class="section-tag"><i class="fas fa-paper-plane"></i> Get In Touch</span>
+                <h2 class="section-title">Contact <span class="highlight">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info animate-on-scroll">
+                    <h3>Let's work together!</h3>
+                    <p>I'm always open to discussing new projects, opportunities, or just having a tech conversation.</p>
+                    <div class="contact-cards">
+                        <a href="mailto:indrajeetkr069@gmail.com" class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">Email</span>
+                                <span class="contact-card-value">indrajeetkr069@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+919155347783" class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">Phone</span>
+                                <span class="contact-card-value">+91-91553-47783</span>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/indrajeeetk" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <div class="contact-card-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">LinkedIn</span>
+                                <span class="contact-card-value">linkedin.com/in/indrajeeetk</span>
+                            </div>
+                        </a>
+                        <a href="https://indrajeet.in" target="_blank" rel="noopener noreferrer" class="contact-card">
+                            <div class="contact-card-icon"><i class="fas fa-globe"></i></div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">Website</span>
+                                <span class="contact-card-value">indrajeet.in</span>
+                            </div>
+                        </a>
+                        <div class="contact-card location-card">
+                            <div class="contact-card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-card-info">
+                                <span class="contact-card-label">Location</span>
+                                <span class="contact-card-value">Siliguri, West Bengal, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper animate-on-scroll">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Discussion" required>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                            <span class="form-highlight"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary form-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>Indrajeet Kumar<span class="logo-bracket">/&gt;</span>
+                </div>
+                <div class="footer-social">
+                    <a href="mailto:indrajeetkr069@gmail.com" class="social-link" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/indrajeeetk" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/indrajeeetk" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://indrajeet.in" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Website"><i class="fas fa-globe"></i></a>
+                </div>
+                <p class="footer-copy">&copy; 2025 Indrajeet Kumar. Built with passion & code.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
